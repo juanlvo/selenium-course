@@ -10,7 +10,7 @@ public class ChromeDriveDemo {
 		String baseUrl = "http://www.google.com";
 		WebDriver driver;
 		
-		System.setProperty("webdriver.chrome.driver", "/home/juan/Documents/Selenium/chromedriver");
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 		driver = new ChromeDriver();
 		
 		driver.get(baseUrl);

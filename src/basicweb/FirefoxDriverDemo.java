@@ -7,9 +7,9 @@ public class FirefoxDriverDemo {
 
 	public static void main(String[] args) {
 		WebDriver driver;
-		System.setProperty("webdriver.gecko.driver", "/home/juan/Documents/Selenium/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "C:\\selenium\\gecko32\\geckodriver.exe");
 		driver = new FirefoxDriver();
-		String baseUrl = "http://www.google.com";
+		String baseUrl = "https://www.google.com";
 		
 		driver.get(baseUrl);
 	}
