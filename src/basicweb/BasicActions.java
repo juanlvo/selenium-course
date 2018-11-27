@@ -10,6 +10,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+/***
+ * Practice lecture 90 section 16
+ * 
+ * @author Juan-Luis.Vivas
+ *
+ */
 class BasicActions {
 
 	WebDriver driver;
