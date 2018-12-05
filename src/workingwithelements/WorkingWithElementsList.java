@@ -14,6 +14,12 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+/***
+ * Section 16 Lecture 94
+ * Working with list of elements
+ * @author Juan-Luis.Vivas
+ *
+ */
 class WorkingWithElementsList {
 	WebDriver driver;
 	String baseUrl;
