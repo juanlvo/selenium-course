@@ -14,7 +14,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 /***
  * Section 17 Lecture 102
- * Get value from a attribute
+ * Get value from an attribute
  * 
  * @author Juan-Luis.Vivas
  *
