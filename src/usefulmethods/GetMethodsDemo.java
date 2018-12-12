@@ -12,6 +12,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import usefulmethods.GenericMethods;
 
+/***
+ * Section 17 Lecture 103
+ * Generic Methods
+ * 
+ * @author Juan-Luis.Vivas
+ *
+ */
 class GetMethodsDemo {
 	
 	private WebDriver driver;

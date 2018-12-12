@@ -4,6 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+/***
+ * Section 17 Lecture 103
+ * Generic Methods 
+ * 
+ * @author Juan-Luis.Vivas
+ *
+ */
 public class GenericMethods {
 	
 	WebDriver driver;
