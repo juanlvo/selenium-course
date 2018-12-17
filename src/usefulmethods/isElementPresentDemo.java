@@ -14,8 +14,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import usefulmethods.GenericMethods;
 
 /***
- * Section 17 Lecture 104
- * Generic Methods to find Elements List
+ * Section 17 Lecture 105
+ * Generic Methods to find Elements presents
  * 
  * @author Juan-Luis.Vivas
  *
