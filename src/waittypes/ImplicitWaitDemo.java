@@ -13,6 +13,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import usefulmethods.GenericMethods;
 
+/***
+ * Section 18 Lecture 108
+ * Implicit Waits
+ * @author juanl
+ *
+ */
 class ImplicitWaitDemo {
 	private WebDriver driver;
 	private String baseUrl;
