@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 /***
- * Section 17 Lecture 103
+ * Section 17 Lecture 106
  * Generic Methods 
  * 
  * @author Juan-Luis.Vivas
