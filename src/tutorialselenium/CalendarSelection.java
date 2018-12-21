@@ -2,6 +2,8 @@ package tutorialselenium;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.util.List;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -11,13 +13,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /***
- * Section 19 Lecture 114
- * Calender Selection Example
+ * Section 19 Lecture 114-115
+ * Calendar Selection Example
  * 
  * @author juanl
  *
  */
-class CalenderSelection {
+class CalendarSelection {
 	private WebDriver driver;
 	private String baseUrl;
 
@@ -30,7 +32,7 @@ class CalenderSelection {
 		driver.manage().window().maximize();
 	}
 
-	@Test
+
 	public void test1() {
 		driver.get(baseUrl);
 		//click flight tab
@@ -45,7 +47,32 @@ class CalenderSelection {
 		dateToSelect.click();
 	}
 	
-	
+	@Test
+	public void test2() {
+		driver.get(baseUrl);
+		//click flight tab
+		driver.findElement(By.id("tab-flight-tab-hp")).click();
+		//find departing flight
+		WebElement departingField = driver.findElement(By.id("flight-departing-hp-flight"));
+		//click in the departing field
+		departingField.click();
+		//find the first month in the calendar
+		WebElement calMonth = driver.findElement(By.xpath("//div[@class='datepicker-cal']//div[2]//table"));
+		//list of valid elements
+		List<WebElement> allValidDates = calMonth.findElements(By.tagName("button"));
+		
+		for (WebElement date : allValidDates) {
+			if (date.isEnabled()) {
+				//System.out.println("is enable");
+				//System.out.println("text is: "+date.getText() );
+				if (date.getText().contains("30")) {
+					//System.out.println("click");
+					date.click();
+					break;	
+				}
+			}
+		}
+	}
 	
 	@AfterEach
 	public void tearDown() throws Exception {
