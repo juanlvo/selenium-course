@@ -13,7 +13,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 /***
- * Section 21 Lecture 123
+ * Section 21 Lecture 123 & 124
  * Switch Window
  * 
  * @author juanl
@@ -33,12 +33,7 @@ class SwitchWindow {
 	}
 
 	@Test
-	void test() {
-/*		WebElement openWindow = driver.findElement(By.id("openwindow"));
-		openWindow.click();
-		
-		WebElement searchBox = driver.findElement(By.id("search-courses"));
-		searchBox.sendKeys("python");*/
+	void test() throws InterruptedException {
 		
 		//Get the handle
 		String parentHandle = driver.getWindowHandle();
@@ -54,10 +49,20 @@ class SwitchWindow {
 		//Switching between handles
 		for(String handle: handles) {
 			System.out.println(handle);
+			if(!handle.equals(parentHandle)) {
+				driver.switchTo().window(handle);
+				Thread.sleep(2000);
+				WebElement searchBox = driver.findElement(By.id("search-courses"));
+				searchBox.sendKeys("python");
+				Thread.sleep(2000);
+				driver.close();
+				break;
+			}
 		}
 		
 		//Switch back to the parent window
-		
+		driver.switchTo().window(parentHandle);
+		driver.findElement(By.id("name")).sendKeys("Test Successfull");
 	}
 	
 	@AfterEach
