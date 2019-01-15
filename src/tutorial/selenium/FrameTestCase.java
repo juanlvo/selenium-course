@@ -12,6 +12,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 import page.classes.SearchPageFactory2;
 
+/***
+ * Section 25 Lecture 142
+ * Page Factory
+ * 
+ * @author juanl
+ *
+ */
 class FrameTestCase {
 	private WebDriver driver;
 	private String baseUrl;
