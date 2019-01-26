@@ -15,7 +15,7 @@ import org.openqa.selenium.support.PageFactory;
 public class SearchPageFactory2 {
 	WebDriver driver;
 	
-	@FindBy(id="primary-header-flight")
+	@FindBy(id="tab-flight-tab-hp")
 	WebElement flightTab;
 	
 	@FindBy(id="flight-origin-hp-flight")
@@ -33,7 +33,7 @@ public class SearchPageFactory2 {
 	@FindBy(xpath="//form[@id='gcw-flights-form-hp-flight']//button[@type='submit']")
 	WebElement buttonSearch;
 	
-	public void SearchPageFactory(WebDriver driver) {
+	public SearchPageFactory2(WebDriver driver) {
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}

@@ -7,6 +7,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -29,7 +30,7 @@ class FrameTestCase {
 		System.setProperty("webdriver.gecko.driver", "C:\\selenium\\gecko32\\geckodriver.exe");
 		driver = new FirefoxDriver();
 		baseUrl = "https://www.expedia.com/";
-		searchPage = new SearchPageFactory2();
+		searchPage = new SearchPageFactory2(driver);
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(baseUrl);
@@ -48,7 +49,7 @@ class FrameTestCase {
 	@AfterEach
 	void tearDown() throws Exception {
 		Thread.sleep(3000);
-		//driver.quit();
+		driver.quit();
 	}
 
 }
